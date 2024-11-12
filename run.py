@@ -1,10 +1,11 @@
+from flask import Flask
+from views.GastoView import gasto_blueprint  
 from app import create_app
-from views.GastoView import gasto_común_blueprint  
 
 app = create_app()
 
-# Registrar los blueprints
-app.register_blueprint(gasto_común_blueprint)  
+# Registrar el blueprint
+app.register_blueprint(gasto_blueprint)
+
 if __name__ == '__main__':
-    # Ejecutar la aplicación con el modo de depuración activado
     app.run(debug=True)

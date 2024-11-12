@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from controllers.GastoController import GastoController
+from datetime import datetime
 
 gasto_blueprint = Blueprint('gasto_blueprint', __name__)
 

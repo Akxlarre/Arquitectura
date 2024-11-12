@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
 # Instancia de SQLAlchemy
 db = SQLAlchemy()
 
@@ -30,7 +29,7 @@ def create_app():
     # Definir el contexto de la aplicación
     with app.app_context():
         # Importar modelos y crear las tablas
-        from models.GastoModel import GastoComunModel
+        from models.GastoModel import Gasto
         db.create_all()  # Crear todas las tablas en la base de datos
 
     return app
