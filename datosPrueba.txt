@@ -1,0 +1,23 @@
+1. Generar Gasto (POST /gastos/generar):
+    URL: http://127.0.0.1:5000/gastos/generar
+    Método: POST
+    Cuerpo (JSON):
+    {
+        "departamentos": ["Depto1", "Depto2", "Depto3"],
+        "periodo": "2024-11",
+        "monto": 150000
+    }
+
+2. Marcar como Pagado (POST /gastos/marcar-pagado):
+    URL: http://127.0.0.1:5000/gastos/marcar-pagado
+    Método: POST
+    Cuerpo (JSON):
+    {
+        "departamento": "Depto1",
+        "periodo": "2024-11",
+        "fecha_pago": "2024-11-10"
+    }
+
+3. Obtener Gastos Pendientes (GET /gastos/pendientes):
+    URL: http://127.0.0.1:5000/gastos/pendientes?mes=11&anio=2024
+    Método: GET
